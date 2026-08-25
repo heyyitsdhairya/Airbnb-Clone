@@ -1,0 +1,160 @@
+.sticky-nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 500;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  animation: navSlideDown 0.2s ease-out;
+}
+
+@keyframes navSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sticky-nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+@media (min-width: 1128px) {
+  .sticky-nav-inner {
+    max-width: 1120px;
+    padding: 0 40px;
+  }
+}
+
+.sticky-nav-tabs {
+  display: flex;
+  gap: 28px;
+  height: 100%;
+}
+
+.sticky-nav-item {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222222;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  transition: color 0.15s ease;
+}
+
+.sticky-nav-item:hover {
+  color: #000000;
+}
+
+.sticky-nav-item.active {
+  font-weight: 600;
+  color: #222222;
+}
+
+.sticky-nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #222222;
+}
+
+.sticky-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sticky-nav-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.sticky-nav-price-row {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #222222;
+}
+
+.sticky-nav-price {
+  font-weight: 600;
+  color: #222222;
+}
+
+.sticky-nav-nights {
+  font-weight: 400;
+  font-size: 14px;
+  color: #222222;
+}
+
+.sticky-nav-rating-row {
+  font-size: 12px;
+  line-height: 1.3;
+  color: #222222;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.sticky-nav-rating-row .star {
+  font-size: 10px;
+  color: #222222;
+}
+
+.sticky-nav-rating-row .rating {
+  font-weight: 600;
+  color: #222222;
+}
+
+.sticky-nav-rating-row .dot {
+  color: #222222;
+}
+
+.sticky-nav-rating-row .reviews {
+  color: #222222;
+  font-weight: 400;
+}
+
+.sticky-nav-reserve-btn {
+  background: linear-gradient(to right, #E61E4E 0%, #E31C5F 50%, #D70466 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+.sticky-nav-reserve-btn:hover {
+  filter: brightness(0.95);
+}
+
+.sticky-nav-reserve-btn:active {
+  transform: scale(0.96);
+}

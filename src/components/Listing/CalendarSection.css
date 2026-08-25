@@ -1,0 +1,139 @@
+.calendar-section {
+  padding: 40px 0;
+}
+
+.calendar-header {
+  margin-bottom: 24px;
+}
+
+.calendar-dates-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.month {
+  width: 100%;
+}
+
+.month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: var(--bg-light);
+}
+
+.spacer {
+  width: 36px;
+}
+
+.month-title {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  row-gap: 2px;
+}
+
+.day-name {
+  font-size: 12px;
+  color: var(--text-light);
+  font-weight: 500;
+  text-align: center;
+  padding: 6px 0 12px;
+}
+
+.day {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.day-text {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+.day.empty {
+  cursor: default;
+}
+
+.day:hover:not(.selected):not(.in-range):not(.booked):not(.empty) .day-text {
+  border: 1px solid var(--text-dark);
+}
+
+.day.booked .day-text {
+  color: var(--border-light);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.day.selected .day-text {
+  background-color: var(--text-dark);
+  color: white;
+  z-index: 2;
+}
+
+.day.in-range {
+  background-color: #f0f0f0;
+}
+
+/* Range connectors using gradients */
+.day.selected.start {
+  background: linear-gradient(to right, transparent 50%, #f0f0f0 50%);
+}
+
+.day.selected.end {
+  background: linear-gradient(to right, #f0f0f0 50%, transparent 50%);
+}
+
+.calendar-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.clear-dates-btn {
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--text-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+}

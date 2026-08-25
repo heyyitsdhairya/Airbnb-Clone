@@ -1,0 +1,196 @@
+.sidebar-container {
+  position: sticky;
+  top: 24px;
+}
+
+/* Promo Card */
+.sidebar-promo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  background-color: #fff;
+}
+
+.promo-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.promo-tag-exact-img {
+  width: 26px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.promo-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.promo-terms {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+.promo-claim-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #f7f7f7;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.promo-claim-btn:hover {
+  background-color: #eee;
+}
+
+/* Reservation Widget */
+.reservation-widget {
+  padding: 24px;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.price-header {
+  margin-bottom: 24px;
+}
+
+.price-amount {
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.price-label {
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+/* Booking Inputs */
+.booking-inputs {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.dates-row {
+  display: flex;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.date-input {
+  flex: 1;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.date-input:hover {
+  background-color: var(--bg-light);
+}
+
+.check-in {
+  border-right: 1px solid var(--border-light);
+}
+
+label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.date-value, .guests-value {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.guests-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.guests-row:hover {
+  background-color: var(--bg-light);
+}
+
+/* Misc info */
+.cancellation-info {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 16px;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text-dark);
+}
+
+.reserve-btn {
+  width: 100%;
+  background: linear-gradient(to right, #E61E4D, #E31C5F, #D70466);
+  color: white;
+  padding: 14px;
+  border-radius: 32px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.reserve-btn:hover {
+  opacity: 0.92;
+}
+
+.reserve-btn:active {
+  transform: scale(0.97);
+}
+
+.charge-notice {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* Report listing */
+.report-listing {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.report-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+}
+
+.report-btn:hover {
+  color: var(--text-dark);
+}

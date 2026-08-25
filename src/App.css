@@ -1,0 +1,23 @@
+/* App specific layout styles will go here */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (min-width: 1128px) {
+  .app-container {
+    padding: 0 80px;
+  }
+}
+
+.main-content {
+  padding-top: 24px;
+}
+
+#photos,
+#amenities,
+#reviews,
+#location {
+  scroll-margin-top: 140px;
+}

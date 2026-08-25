@@ -1,0 +1,325 @@
+/* Base overlay and container */
+.photo-tour-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.photo-tour-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.photo-tour-header {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #fff;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.photo-tour-header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.photo-tour-btn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #222;
+}
+
+.photo-tour-btn-icon:hover {
+  background-color: #f7f7f7;
+}
+
+.photo-tour-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Top Navigation Bar */
+.photo-tour-top-nav {
+  max-width: 1104px;
+  margin: 0 auto 64px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  flex-shrink: 0;
+}
+
+.photo-tour-nav-scroll {
+  display: flex;
+  flex-wrap: wrap; /* Keep the 9 images at top into two lines */
+  justify-content: flex-start;
+  row-gap: 20px;
+  column-gap: 14px;
+  width: 100%;
+}
+
+.photo-tour-nav-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 120px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 1; /* Removed dimming so colors are vibrant! */
+  transition: transform 0.2s ease;
+}
+
+.photo-tour-nav-card:hover,
+.photo-tour-nav-card.active {
+  opacity: 1;
+}
+
+.photo-tour-card-thumb {
+  width: 120px;
+  height: 112px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #ebebeb;
+}
+
+.photo-tour-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.photo-tour-card-label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #5e5e5e;
+  text-align: left;
+  line-height: 1.25;
+  transition: color 0.2s;
+}
+
+.photo-tour-nav-card:hover .photo-tour-card-label,
+.photo-tour-nav-card.active .photo-tour-card-label {
+  color: #222222;
+  font-weight: 500;
+}
+
+/* Scrollable Content */
+.photo-tour-content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 40px 40px;
+}
+
+.tour-rooms-container {
+  max-width: 1104px; /* Matching the top nav container */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-bottom: 120px;
+}
+
+.tour-room-section {
+  display: flex;
+  justify-content: space-between; /* Flush left and right */
+  align-items: flex-start; /* Top aligned exactly with the image */
+}
+
+.tour-room-info {
+  flex: 0 0 340px; /* Lock text column to the left edge */
+  position: sticky;
+  top: 24px;
+}
+
+.tour-room-title {
+  font-size: 32px; /* Exact size matching the website */
+  font-weight: 600; /* Boldness matching the website */
+  color: #222222;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.tour-room-amenities {
+  font-size: 16px;
+  font-weight: 400;
+  color: #717171;
+  line-height: 1.5;
+}
+
+.tour-room-grid-col {
+  flex: 0 0 480px; /* Reduced image size slightly */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tour-grid-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.tour-image-wrapper {
+  position: relative;
+  background-color: #ebebeb;
+  border-radius: 12px;
+}
+
+.tour-grid-full .tour-image-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.tour-grid-half .tour-image-wrapper {
+  width: calc(50% - 6px);
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.tour-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.tour-grid-half .tour-image-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .tour-room-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tour-room-info {
+    position: static;
+  }
+}
+
+/* Single Photo Fullscreen View matching reference */
+.photo-tour-single-view {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-tour-single-header {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ebebeb;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.photo-tour-single-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.photo-tour-single-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.photo-tour-single-counter {
+  font-size: 14px;
+  font-weight: 400;
+  color: #222222;
+}
+
+.photo-tour-single-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-tour-single-img-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: calc(100vh - 112px);
+}
+
+.photo-tour-single-img {
+  max-width: 100%;
+  max-height: calc(100vh - 130px);
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.photo-tour-nav-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.photo-tour-nav-arrow:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+}
+
+.photo-tour-nav-arrow:active {
+  transform: scale(0.96);
+}

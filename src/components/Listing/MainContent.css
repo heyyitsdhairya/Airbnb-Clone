@@ -1,0 +1,23 @@
+.main-split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1128px) {
+  .main-split {
+    flex-direction: row;
+    position: relative;
+    /* Space between left and right column */
+    gap: 8.33333%; 
+  }
+
+  .split-left {
+    width: 58.33333%;
+  }
+
+  .split-right {
+    width: 33.33333%;
+    /* Position sticky works on child when parent is display: flex/row */
+    position: relative;
+  }
+}

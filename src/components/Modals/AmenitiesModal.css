@@ -1,0 +1,137 @@
+.amenities-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.amenities-modal-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 780px;
+  height: 86vh;
+  max-height: 86vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+.amenities-modal-header {
+  padding: 24px 24px 12px 24px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+}
+
+.amenities-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #222222;
+}
+
+.amenities-close-btn:hover {
+  background-color: #f7f7f7;
+}
+
+.amenities-modal-body {
+  padding: 0 48px 40px 48px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.amenities-modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222222;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.amenities-categories-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenities-cat-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenities-cat-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222222;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.amenities-cat-group:first-child .amenities-cat-title {
+  margin-top: 0;
+}
+
+.amenities-cat-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.amenity-modal-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.amenity-modal-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+}
+
+.amenity-item-name {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #222222;
+}
+
+.amenity-modal-row.not-included {
+  color: #717171;
+}
+
+.amenity-modal-row.not-included .amenity-item-name {
+  color: #717171;
+  text-decoration: line-through;
+}
+
+.amenity-modal-icon-wrapper.text-muted {
+  color: #717171;
+}

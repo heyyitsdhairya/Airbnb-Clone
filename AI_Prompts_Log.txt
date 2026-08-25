@@ -1,0 +1,68 @@
+# Airbnb Clone - AI Assisted Development Prompt Log
+# Methodology: Due to bot-blockers on the reference URL, this project was built iteratively by feeding the AI specific screenshots, videos, and layout instructions component-by-component.
+
+======================================================
+PHASE 1: Initialization & Global Setup
+======================================================
+1. "I need to build an Airbnb listing page clone in React. Initialize a Vite project. The reference link has a bot blocker, so I will guide you using screenshots. Set up the basic folder structure: components, assets, data."
+2. "Here is a screenshot of the typography and colors. Create a global index.css file defining CSS variables for Airbnb's primary color (#FF385C), text colors, and use Figtree/Inter fonts."
+3. "Reset the default margins and paddings globally, and ensure the main app container has responsive max-width constraints (1280px)."
+
+======================================================
+PHASE 2: Header & Title Section
+======================================================
+4. "Let's build the Header.jsx. Here is a screenshot. Add the Airbnb logo on the left. In the middle, create a pill-shaped search bar with 'Anywhere', 'Anytime', and 'Add guests'."
+5. "The search pill segments need thin dividers between them. Update the CSS to add a 1px gray border-right on the first two segments and add a search icon inside a red circle."
+6. "On the right side of the header, add 'Become a host', a globe icon, and a user profile button with a hamburger menu. Use flexbox to align everything horizontally."
+7. "Create TitleSection.jsx. It should have an h1 for the property name, and below it, a row containing a star icon, rating, review count, and location. Add 'Share' and 'Save' buttons aligned to the right."
+
+======================================================
+PHASE 3: Gallery Layout (CSS Grid)
+======================================================
+8. "Now for Gallery.jsx. I am attaching a screenshot of the 5-image masonry layout. Use CSS grid. The main large image spans 2 columns and 2 rows on the left."
+9. "The 4 smaller images on the right should be in a 2x2 grid. Add a 12px border radius to the outer corners of the entire gallery, but keep the inner corners square."
+10. "Add a hover effect to the images so they slightly darken when hovered. Also, add a 'Show all photos' button floating in the bottom right corner of the gallery grid."
+
+======================================================
+PHASE 4: Main Content & Amenities
+======================================================
+11. "Below the gallery, create a 2-column layout. The left column ContentLeft.jsx will hold the details. Add the host information section with a title, subtitle, and a circular host avatar on the right."
+12. "Add a horizontal divider below the host info. Then add a short paragraph description of the property, followed by a 'Show more >' button."
+13. "Create the 'What this place offers' (AmenitiesSection.jsx) below the description. Based on this screenshot, make it a 2-column grid. I will provide the SVG icons."
+14. "The spacing between the amenities items is too tight. Increase the gap in the CSS grid to 16px and make the text slightly larger (16px)."
+
+======================================================
+PHASE 5: Reservation Sidebar & Sticky Nav
+======================================================
+15. "Now build the right column: Sidebar.jsx. Here is a screenshot of the reservation widget. Add the price per night at the top and a sticky positioning so it stays visible as I scroll."
+16. "Build the input box inside the widget. It needs an upper half split into 'CHECK-IN' and 'CHECKOUT', and a lower half for 'GUESTS'. Add a 1px border around the whole box and dividers between the fields."
+17. "Add a large red gradient 'Reserve' button below the inputs."
+18. "The sidebar is scrolling out of view. Apply `position: sticky; top: 24px;` to the sidebar container in CSS so it locks onto the screen while scrolling."
+19. "I need a secondary navigation bar (StickyNav.jsx) that sticks to the top of the screen, but it should only appear when the user scrolls past the photo gallery."
+20. "Add navigation links to the sticky nav: 'Photos', 'Amenities', 'Reviews', and 'Location'. On the far right, add a miniature price display and a small 'Reserve' button. Make it slide down smoothly."
+
+======================================================
+PHASE 6: Modals (Photo Tour & Lightbox)
+======================================================
+21. "When 'Show all photos' is clicked, it needs to open a PhotoTourModal.jsx. Make it overlay the entire screen with a white background and hide the body scroll."
+22. "Inside the Photo Tour modal, display all images in a masonry layout based on this screenshot."
+23. "Create a LightboxModal.jsx for viewing a single image full-screen. It should open when any image in the Photo Tour is clicked."
+24. "The Lightbox needs to be fully accessible. Add keyboard listeners so the user can navigate with ArrowLeft and ArrowRight, and close it with Escape."
+25. "I have a z-index issue. When the Lightbox is open, the StickyNav is overlapping it. Fix the z-index hierarchy so modals are always on top (z-index: 1000)."
+
+======================================================
+PHASE 7: Micro-Interactions & Carousel Integration
+======================================================
+26. "while clicking the red color reserve button both in the nav and in the page it should not take the user anywhere instead it should give this popup as attached"
+27. "Update the popup toast to look exactly like the image: dark #222222 background, white text, 12px border-radius, sliding up from the bottom center. It should auto-dismiss after 3 seconds."
+28. "this is how the more stays nearby page is looking how the sizebar is working i also want this exact same replica in my website so first change the price, reviews etc to exactly what is mentioned in the image along the same font size and style and boldness and secondly do the same navigation of sidebar as shown in video do everything accurately and quickly"
+29. "the font is different in price and reviews so use same font as used in the video and also the rating is close to price so edit that"
+30. "remove boldness in prices"
+31. "Greentique Luxury Flat with plunge pool, Calangute ₹44,506 4.94 ... fix these which are not accurate and also rewatch the video and the photo i have attached says that in sidebar dont go till the end the next propery is in the middle so do proper sidebar and fix these prices also some properties are mismatched and misimaged so fix that too quickly"
+32. "Refactor the carousel slider logic using `currentIndex` instead of full pages, so it shifts smoothly and stops exactly at the end without showing empty space on the right."
+
+======================================================
+PHASE 8: Final Quality Assurance
+======================================================
+33. "this was the task given to me i just want you to simply analyze the complete website and tell me is it proper as mentioned in the pdf or not ? dont change or edit anything"
+34. "Check all accessibility features, ensure keyboard navigation works in the Lightbox, and verify that the layout matches the original Airbnb reference pixel-perfectly."

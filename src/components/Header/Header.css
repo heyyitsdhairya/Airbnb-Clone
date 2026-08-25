@@ -1,0 +1,149 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  max-width: none;
+  padding: 0 40px;
+}
+
+@media (min-width: 1128px) {
+  .header-container {
+    padding: 0 80px;
+  }
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Allow logo to take up space so search pill stays centered */
+}
+
+/* Search Pill */
+.search-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 54px;
+  border: 1px solid #dddddd;
+  border-radius: 40px;
+  padding: 0 6px 0 12px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.search-pill:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+.search-pill-segment {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.segment-anywhere {
+  gap: 8px;
+  padding-left: 4px;
+  padding-right: 16px;
+}
+
+.searchbar-house-logo {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.pill-text-bold {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.pill-text-muted {
+  font-size: 14px;
+  font-weight: 400;
+  color: #717171;
+}
+
+.search-divider {
+  height: 22px;
+  width: 1px;
+  background-color: #dddddd;
+}
+
+.search-icon-btn {
+  background-color: #ff385c;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  margin-right: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.search-icon-btn:hover {
+  transform: scale(1.04);
+}
+
+/* Right Menu */
+.right-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1; /* Balance out the flex container */
+  gap: 4px;
+}
+
+.become-host-link {
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 24px;
+  transition: background-color 0.2s;
+}
+
+.become-host-link:hover {
+  background-color: var(--bg-light);
+}
+
+.right-menu-btn {
+  background-color: #f2f2f2;
+  color: #222222;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.right-menu-btn:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.02);
+}

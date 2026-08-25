@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #FF385C;
+  --text-dark: #222222;
+  --text-light: #717171;
+  --border-light: #DDDDDD;
+  --bg-light: #F7F7F7;
+  
+  --font-family: 'Figtree', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.43;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Base focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--text-dark);
+  outline-offset: 2px;
+}
+
+/* Scroll lock when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Visually hidden for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
