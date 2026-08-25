@@ -1,0 +1,19 @@
+{
+  "project": {
+    "name": "airbnb-clone",
+    "framework": "react-vite",
+    "version": "1.0.0"
+  },
+  "assistant": {
+    "role": "Fullstack Frontend Engineer & UI Specialist",
+    "rules": [
+      "Follow component-driven architecture in src/components",
+      "Preserve vanilla CSS tokens from src/index.css",
+      "Ensure all modals remain keyboard-accessible (Esc, Arrow keys)",
+      "Strictly enforce desktop pixel parity matching reference design"
+    ]
+  },
+  "linter": {
+    "command": "npm run lint"
+  }
+}
